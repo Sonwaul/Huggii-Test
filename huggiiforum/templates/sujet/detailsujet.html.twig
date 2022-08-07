@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ controller_name }}{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    
+    <p id="debut"> Il y existe à ce jour, le {{ "now"|date("d/m/Y") }}, {{sujets.messages|length}} message(s) dans le sujet {{sujets.libelle}}</p>
+    {% set id = 1 %}
+    {% for message in sujets.messages %}
+
+        <div class="container">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>N° Message</th>
+                        <th>Date de publication</th>
+                        <th>Contenu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="td-width"><titre>Message n° {{id}}</titre></td>
+                        <td id="td-width"><libelle>{{message.getDatepublication()|date('d/m/Y H:i:s')}}</libelle></td>
+                        <td>{{message.getLibelle()}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        {% set id = id + 1 %}
+    {% else %}
+        <p> Il n'y a pas encore de message dans ce sujet </p>
+    {% endfor %}
+
+    <div id="droite">
+        <a id="buttonMessage" href="{{path('addMessage')}}">Ajouter un message</a>
+    </div>
+
+</div>
+{% endblock %}

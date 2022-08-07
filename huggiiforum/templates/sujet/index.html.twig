@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ controller_name }}{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    
+    <p id="debut"> Il y existe à ce jour, le {{ "now"|date("d/m/Y") }}, {{sujets|length}} sujet(s) sur le Forum </p>
+    
+    {% set id = 1 %}
+
+    {% for sujet in sujets %}
+        <div class="container">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>N° Sujet</th>
+                        <th>Nom du sujet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="td-width"><titre>Sujet n° {{id}}</titre></td>
+                        <td><libelle><a href="{{path('unSujet',{id:sujet.id})}}">{{sujet.libelle}}</a></libelle></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        {% set id = id + 1 %}
+    {% else %}
+        <p> Il n'y a pas encore de sujets </p>
+    {% endfor %}
+
+</div>
+{% endblock %}

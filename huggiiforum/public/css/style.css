@@ -1,0 +1,95 @@
+/* BASE */
+
+body{
+    font-family: "Arial";;
+}
+header{
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    background-color: #f5f7f9;
+}
+#imagesHeader{
+    width: 100px;
+}
+#leTitre{
+    font-size: 65px;
+    text-align: center;
+    text-decoration: bold;
+    color: red;
+}
+#nav{
+    text-align: center;
+    font-size: 30px;
+}
+#nav li{
+    display: inline;
+    list-style: none;
+}
+#nav a {
+    display:inline-block;
+    margin: 0 30px;
+    color: #27abf1;
+}
+#premiereDiv{
+    font-size: 22px;
+    text-align: center;
+}
+h2{
+    text-decoration: underline;
+    font-style: italic;
+}
+#erreur{
+    text-decoration: underline;
+    font-style: bold;
+    color: red;
+    font-size: 32px;
+    text-align: center;
+}
+
+/* SEJOUR INFIRMIER */
+code{
+    color: #cd000c;
+}
+titre{
+    font-weight: bold;
+    text-decoration: underline black;
+}
+libelle{
+    color: blue;
+    font-weight: bold;
+}
+lien {
+    color: green;
+    font-weight: bold;
+    font-size: 18px;
+}
+debut {
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: underline black;  
+}
+th{
+    text-align: center;
+    
+}
+#td-width{
+    width: 25%;
+}
+#droite{
+    float: right;
+}
+#buttonMessage:link, #buttonMessage:visited {
+    background-color: grey;
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+#buttonMessage:hover, #buttonMessage:active {
+    background-color: black;
+}
+
+.example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+.example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
